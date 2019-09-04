@@ -1,55 +1,4 @@
-# JavaScript Code Challenge
-
-## Allowed Resources
-This Code Challenge is designed to test your abilities in a similar situation to a technical assessment from an employer. In order to achieve an accurate assessment, there are a few restrictions on the resources you may use to complete this code challenge. 
-
-### Allowed
-
- 1. Your brain!
- 2. The Debugger. Please run and debug your code
- 3. The general internet
- 
-### Not Allowed
-
- 1. Other students
- 2. Any prepared materials 
- 3. Any lessons
- 4. Any solution code from any lab, whether you wrote it or Flatiron School did
- 5. Code from any lecture
-
-## Objectives
-
-- DOM Manipulation
-- Events and Event Handlers
-- Callbacks
-- Fetching from APIs
-
-## Instructions
-
-Today we're building an app for viewing, liking, and commenting on a single picture. There is a backend API deployed on a server that you will use. You will be building out the frontend for this app.
-
-A user of your app must be able to do the following things:
-
-- As a user, when the page loads, I should see:
-  - an image
-  - any comments that image has
-  - the number of likes that image has
-
-- As a user, I can click a button to like an image. When I click, the number of likes the image has should increase by one without the page refreshing.
-
-- As a user, I can enter text in an input field, and submit the form that the input is in. When I do, the app should add comment to the image without the page refreshing. I should see my new comment *below* any previous comments.
-
-- As a user, when I refresh the page, any comments or likes I have added should still be there. When a user adds a like or a comment, make sure their changes are sent to the backend API.
-
-## Functionality demo
-
-![Example](./animated_challenge_example.gif "Example Functionality")
-
-## Deliverables and How to Approach
-
-For this challenge it is important to work iteratively: one feature at a time, before moving on to the next. You should **prioritize making code that works over attempting all of the deliverables.** It is better to have a handfull of fully working features than 10 things that were attempted but do not work.
-
-We have provided a series of prioritized steps to help you break down your approach this problem:
+<!--
 
 ## Step 1 - Get the Image Data
 
@@ -93,19 +42,19 @@ Use the data from the API response to change what's currently on the page (take 
 - the number of likes
 - any comments in an unordered list
 
-(If you cannot get your fetch request to work correctly, you can  use the example response above to append content to the DOM and attempt the subsequent steps)
+(If you cannot get your fetch request to work correctly, you can  use the example response above to append content to the DOM and attempt the subsequent steps) -->
 
-## Step 2 - Like Feature (Frontend)
+<!-- ## Step 2 - Like Feature (Frontend)
 
 The next feature to approach is the functionality to add likes to a picture. First, get this working in the browser only without worrying about persistence.
 
 Clicking the 'Like' button should increase the number of likes shown on the page by one.
 
-A user can like the same picture multiple times.
+A user can like the same picture multiple times. -->
 
 ---
 
-## Step 3 - Like Feature (Backend)
+<!-- ## Step 3 - Like Feature (Backend)
 
 This app will use what is called _optimistic rendering_. This means the DOM will be updated *before* the changes are added to the database. When a user clicks the 'Like' button we will immediately update the DOM. Next, your job is to make a POST request to persist the new Like in the backend database.
 
@@ -142,17 +91,17 @@ Example Response:
 
 Since we are using optimistic rendering, you shouldn't have to do anything with the response.
 
-To test your code, make sure the number of likes increments when you click the like button. Then, refresh the page and make sure the increased number of likes remains the same.
+To test your code, make sure the number of likes increments when you click the like button. Then, refresh the page and make sure the increased number of likes remains the same. -->
 
 ---
 
-## Step 4 - Comment Feature (Frontend)
+<!-- ## Step 4 - Comment Feature (Frontend)
 
 The next feature to approach is the functionality to add comments to a picture. First, get this working in the browser only, without worrying about persistence.
 
-Filling out the input and clicking 'Submit' should append your new comment as an `<li>` to the comments unordered list element. You should also clear out the text in the comment input, so it's empty and ready for the next comment to be added.
+Filling out the input and clicking 'Submit' should append your new comment as an `<li>` to the comments unordered list element. You should also clear out the text in the comment input, so it's empty and ready for the next comment to be added. -->
 
-## Step 5 - Comment Feature (Backend)
+<!-- ## Step 5 - Comment Feature (Backend)
 
 As before, we need to persist the comment to the database, after optimistically rendering a comment.
 
@@ -192,9 +141,9 @@ Example Response (created comment):
 
 Since we are using optimistic rendering, you shouldn't have to do anything with the response.
 
-To test your code you should be able to refresh the page and see any comments you added.
+To test your code you should be able to refresh the page and see any comments you added. -->
 
-## BONUS - NOT REQUIRED
+<!-- ## BONUS - NOT REQUIRED
 
 ## Step 6 - Delete a comment feature
 
@@ -217,4 +166,4 @@ Example Response:
 }
 ```
 
-_(Hint: To get the comment's id you may have to think about changing the way you handle the response received from creating a comment)_
+_(Hint: To get the comment's id you may have to think about changing the way you handle the response received from creating a comment)_ -->
