@@ -19,28 +19,15 @@ function fetchImg(){
   .then(renderimages)
 }
 
-fetchImg()
 
-
-function fetchComments(){
-  fetch(imageId)
+function fetchcoments(){
+  fetch(commentsURL)
   .then(resp => resp.json())
-  .then(rendercomments)
+  .then(renderimages)
 }
 
-fetchComments()
-
-
-
-
-
-
-
-
-
-
-
-
+fetchImg()
+fetchcoments()
 
 const imageCollection = document.getElementById('image_card')
 function renderimages(image) {
@@ -80,10 +67,6 @@ addForm.addEventListener('submit', function (event) {
 })
 
 
-
-
-
-
 const likeButton = document.querySelector('.like_button')
 likeButton.addEventListener('click', function (event) {
   let likeButtonIsPressed = event.target.className === "like-btn"
@@ -107,18 +90,49 @@ fetch(`https://randopic.herokuapp.com/likes/${id}`, {
   }
 
 
-if (subButtonIsPressed) {
+  else if (subButtonIsPressed) {
     let id = event.target.parentElement.dataset.id
-    fetch(`commentsURL`, {
+    fetch(`http://localhost:3000/images/${id}`, {
       method: 'POST'
     })
     .then(response => response.json())
     .then(fetchImg)
   }
-
-
-
 })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// document.querySelector('#new-quote-form').addEventListener('submit', function(event) { event.preventDefault() const newQ = document.getElementById("new-quote").value; const author = document.getElementById("author").value; fetch(`http://localhost:3000/quotes`, { method: 'POST', headers: { 'Content-Type': 'application/json', }, body: JSON.stringify({ quote: `${newQ}`, author: `${author}`, }) }) .then(resp => resp.json()) .then(fetchquotes) })
+
+
+
+
+
+
+  // images.forEach(function(image) {
+  //   likeBtn.innerHTML += `
+  //   <li class='image-card' data-id=${image.id}>
+  //   <blockimage class="blockimage">
+  //     <p class="mb-0">${image.image}.</p>
+  //     <footer class="blockimage-footer">${image.author}</footer>
+  //     <br>
+  //     <button class='btn-danger'>Delete</button>
+  //   </blockimage>
+  // </li>
+  // `
 
 
 
