@@ -65,6 +65,8 @@ Visit https://randopic.herokuapp.com/ in your web browser. The backend will assi
 
 ```js
 GET 'https://randopic.herokuapp.com/images/:id'
+
+https://randopic.herokuapp.com/images/3344
 ```
 
 ```json
@@ -217,4 +219,4 @@ Example Response:
 }
 ```
 
-_(Hint: To get the comment's id you may have to think about changing the way you handle the response received from creating a comment)_
+_(Hint: To get the comment's id you may have to think about changing the way you handle the response 
